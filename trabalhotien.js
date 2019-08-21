@@ -1,5 +1,5 @@
 var strin = '(d & a) & (b | d)';
-var sr = "d|c|E(a0b)|D|x";
+
 var ListaPrioridades = ['&','|'];
 
 function nomefunc(vetor,pos){
