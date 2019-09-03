@@ -1,4 +1,4 @@
-var strin = '(d & a) & (b | d)';
+var strin = 'a |(b & c)';
 
 var ListaPrioridades = ['&','|'];
 
@@ -12,6 +12,10 @@ function nomefunc(vetor,pos){
     }
     return r;
 }
+
+
+// Mudar
+
 function precompila(vet2){
     //trocar parenteses por []
     for (var i = 0; i < vet2.length; i++) {
@@ -24,6 +28,8 @@ function precompila(vet2){
     }
     return vet2;
 }
+
+// mudar
 function vetorizar(carac){
     // transformr a estring vet em um vetor de arrays
     var vet = carac.split('');
@@ -90,6 +96,8 @@ function  operadorDireita (posi,ListaP,vet){
     }
     return -1;
 }
+
+// mudar
 function resolveF (vet,ListaP){
    
     var posMaiorProcedencia = maiorProcedencia(vet,ListaP);
@@ -192,7 +200,7 @@ function f(strinn,ListaP){
 window.alert(f(strin,ListaPrioridades));
 
 function parenteses(vetor,ListaP){
-    
+    var vet2 = [];
     while(PegarAbreParent(vetor) != -1){
         var posabrep = PegarAbreParent(vetor);
         var posfechp = PegarFechaParent(vetor);
@@ -229,7 +237,7 @@ function parenteses(vetor,ListaP){
         vetor = vetor.join("");
         vetor = vetorizar(vetor);
         //tirar substituir os ' ' por ''
-        var vet2 = [];
+        
         var j = 0;
         for (var i = 0; i < vetor.length; i++) {
             if(vetor[i]!=" "){
