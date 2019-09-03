@@ -17,5 +17,5 @@ O trabalho computacional consiste em verificar se uma expressão tautológica é
 * Implementar se uma expressão é fbf.
 * Implementar tradução das expressões para sua forma de função.
 
-# Linguagem
+## Linguagem
 JavaScript
